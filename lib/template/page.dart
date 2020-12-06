@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import '../constant/route.dart';
+import '../constant/main.dart';
+import '../widget/main.dart';
 
 class TemplatePage extends StatelessWidget {
   static UiRoutes route = UiRoutes.root;
@@ -7,6 +8,6 @@ class TemplatePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: Text('page'));
+    return UiPage(child: Scaffold(body: Text('page')));
   }
 }
