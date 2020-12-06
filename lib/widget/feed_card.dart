@@ -1,37 +1,40 @@
 import 'package:flutter/material.dart';
 import 'package:transparent_image/transparent_image.dart';
 
+import '../page/main.dart';
+import '../shared_class/main.dart';
+
 /// Feed preview for card
 class FeedCard extends StatelessWidget {
-  final String thumbUrl;
-  final String title;
-  final String description;
-  final String url;
-  const FeedCard(
-      {Key key, this.thumbUrl, this.title, this.description, this.url})
-      : super(key: key);
+  final FeedModel feed;
+  const FeedCard({Key key, @required this.feed}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Column(
-        children: [
-          InteractiveViewer(
-              child: FadeInImage.memoryNetwork(
-            image: thumbUrl,
-            placeholder: kTransparentImage,
-          )),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Text(title, style: Theme.of(context).textTheme.headline6
-                // .copyWith(color: Colors.red),
-                ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Text(description),
-          ),
-        ],
+    return InkWell(
+      onTap: () {
+        Navigator.of(context)
+            .push(MaterialPageRoute(builder: (_) => FeedPage(feed: feed)));
+      },
+      child: Container(
+        child: Column(
+          children: [
+            InteractiveViewer(
+                child: FadeInImage.memoryNetwork(
+              image: feed.urlToImage,
+              placeholder: kTransparentImage,
+            )),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(feed.title,
+                  style: Theme.of(context).textTheme.headline6),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(feed.description),
+            ),
+          ],
+        ),
       ),
     );
   }
