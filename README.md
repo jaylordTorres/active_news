@@ -25,3 +25,7 @@
 # APIs
   - https://newsapi.org/
   - you can use my api key `1e03573d13b045c5ad2aa1a43ef5f3df`
+
+# Development
+  - create .env file on root dir
+  - - API_KEY required variable
