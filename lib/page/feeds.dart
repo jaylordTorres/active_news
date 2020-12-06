@@ -1,3 +1,4 @@
+import 'package:active_news/shared_class/store.dart';
 import 'package:flutter/material.dart';
 import '../constant/main.dart';
 import '../widget/main.dart';
@@ -19,18 +20,14 @@ class FeedsPage extends StatelessWidget {
   }
 
   Widget builder(BuildContext context, List<FeedModel> data) {
+    Store.articles = data;
     return ListView.builder(
       itemCount: data.length,
       itemBuilder: (context, index) {
         final feed = data[index];
         return Padding(
           padding: const EdgeInsets.only(bottom: 16.0),
-          child: FeedCard(
-            title: feed.title,
-            url: feed.url,
-            description: feed.description,
-            thumbUrl: feed.urlToImage,
-          ),
+          child: FeedCard(feed: feed),
         );
       },
     );
