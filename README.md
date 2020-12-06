@@ -1,16 +1,22 @@
-# active_news
+# Pages
+  - activation
+  - - display on first load
+  - - show app will do to devices
+  - - ability to active: will receive notification for news
 
-A new Flutter project.
+  - news feeds
+  - - display all nereast  and latest news (simplified)
+  - - ability to filter news
+  - - ability to find news
+  - - ability to share news
+  - - ability to block news on author
 
-## Getting Started
+  - news page 
+  - - display news full news content
+  - - ability to share news
+  - - ability to block news on author
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+  - deactive
+  - - display onyl when triggered
+  - - remove notification for device
+  - - must display [activation] page on app start again
