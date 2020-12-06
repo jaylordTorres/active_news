@@ -35,8 +35,6 @@ class FeedModel {
     title = json["title"];
   }
   static List<FeedModel> fromResponseList(CommonResponseModel reponse) {
-    print(reponse.data["articles"]);
-
     final List<dynamic> articles = reponse.data["articles"];
     return articles.map((article) => FeedModel.fromJson(article)).toList();
   }
