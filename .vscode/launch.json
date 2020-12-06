@@ -23,5 +23,11 @@
       "type": "dart",
       "args": ["-d", "iphone"]
     },
+    {
+      "name": "linux",
+      "request": "launch",
+      "type": "dart",
+      "args": ["-d", "linux"]
+    },
   ]
 }
