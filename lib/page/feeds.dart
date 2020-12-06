@@ -12,15 +12,13 @@ class FeedsPage extends StatelessWidget {
     return UiPage(
         child: Scaffold(
             body: UiFetcher<List<FeedModel>, FeedModel>(
-      url: 'https://newsapi.org/v2/everything?domains=wsj.com&apiKey=' +
-          ApiConstant.key,
+      url: ApiConstant.newsUrl + ApiConstant.key,
       builder: builder,
       parser: FeedModel.fromResponseList,
     )));
   }
 
   Widget builder(BuildContext context, List<FeedModel> data) {
-    print(data);
     return ListView.builder(
       itemCount: data.length,
       itemBuilder: (context, index) {
