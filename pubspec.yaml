@@ -13,6 +13,10 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.1
+  transparent_image: ^1.0.0
+  http: ^0.12.2
+  flutter_html: ^1.1.1
+  flutter_dotenv: ^2.1.0
 
 dev_dependencies:
   flutter_test:
@@ -33,3 +37,5 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+  assets:
+    - .env

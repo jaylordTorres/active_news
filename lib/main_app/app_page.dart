@@ -16,6 +16,11 @@ final _pages = [
     RootPage.route,
     (_) => RootPage(),
   ),
+  UiRouteItem(
+    uiRoutes[FeedsPage.route],
+    FeedsPage.route,
+    (_) => FeedsPage(),
+  ),
 ];
 
 final Map<String, WidgetBuilder> uiRoutePages = Map.fromEntries(_pages
