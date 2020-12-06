@@ -8,7 +8,16 @@ class RootPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: Scaffold(body: Text('Root page')),
+      child: Scaffold(
+          body: Column(
+        children: [
+          Text('Root page'),
+          ElevatedButton(
+            child: Text('sample'),
+            onPressed: () {},
+          )
+        ],
+      )),
     );
   }
 }
