@@ -5,7 +5,7 @@ import '../widget/main.dart';
 import '../shared_class/main.dart';
 
 class FeedsPage extends StatelessWidget {
-  static UiRoutes route = UiRoutes.root;
+  static UiRoutes route = UiRoutes.feeds;
   const FeedsPage({Key key}) : super(key: key);
 
   @override
