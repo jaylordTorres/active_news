@@ -1,5 +1,5 @@
 /// available pages
-enum UiRoutes { root, activation, deactivation, news, preview }
+enum UiRoutes { feed, feeds, root, activation, deactivation, news, preview }
 
 /// news definiation
 Map<UiRoutes, String> uiRoutes = {
@@ -7,5 +7,7 @@ Map<UiRoutes, String> uiRoutes = {
   UiRoutes.activation: '/activation',
   UiRoutes.deactivation: '/deactivation',
   UiRoutes.news: '/news',
-  UiRoutes.preview: '/preview'
+  UiRoutes.preview: '/preview',
+  UiRoutes.feeds: '/feeds',
+  UiRoutes.feed: '/feed'
 };
