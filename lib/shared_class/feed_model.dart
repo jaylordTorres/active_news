@@ -34,8 +34,13 @@ class FeedModel {
     source = SourceModel.fromJson(json["source"]);
     title = json["title"];
   }
+
   static List<FeedModel> fromResponseList(CommonResponseModel reponse) {
     final List<dynamic> articles = reponse.data["articles"];
-    return articles.map((article) => FeedModel.fromJson(article)).toList();
+    return articles
+        .map((article) => FeedModel.fromJson(article))
+        // remove not http url
+        .where((article) => article.urlToImage.contains("https"))
+        .toList();
   }
 }
